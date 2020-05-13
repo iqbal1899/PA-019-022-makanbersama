@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>
+			Dashboard
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item>
+			<ion-icon name="mail" item-start></ion-icon>
+			{{ userEmail }}
+		</ion-item>
+	</ion-list>
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<ion-button color="danger" (click)="logout()">Logout</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

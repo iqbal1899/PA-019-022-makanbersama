@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tambah Menu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+      <ion-input type="text" placeholder="add menu" [(ngModel)]="taskName"></ion-input>
+      <div class="item-note" item-end>
+        <ion-button (click)="addTask()"><ion-icon name="add">Add task</ion-icon></ion-button>
+      </div>
+  </ion-item>
+  
+    <ion-list>
+      <ion-item *ngFor="let todo of taskList; let i = index">
+        {{todo}}
+        <ion-col class="ion-float-right">
+          <div class="item-note ion-float-right" item-end>
+            <ion-button clear (click) = "deleteTask(i)"><ion-icon name="trash"></ion-icon></ion-button>
+          </div>
+        </ion-col>
+      </ion-item>
+    </ion-list>
+  
+</ion-content>
